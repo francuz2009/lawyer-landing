@@ -3,13 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Юрист по спорам с застройщиками | Евгений Выговский</title>
+    <title>Юрист по спорам с застройщиками | Евгений Выговский | 214-ФЗ</title>
     <meta
       name="description"
-      content="Юрист с 20-летним опытом в девелопменте. Взыскание неустойки, устранение недостатков, расторжение ДДУ по 214-ФЗ."
+      content="Юрист по спорам с застройщиками. 20 лет практики. Взыскание неустойки по 214-ФЗ, расторжение ДДУ, устранение недостатков квартиры. Работаю по всей РФ."
     />
+    <meta
+      name="keywords"
+      content="юрист по застройщикам, споры с застройщиком, взыскание неустойки ДДУ, 214-ФЗ, качество квартиры новостройка, Евгений Выговский"
+    />
+    <link rel="canonical" href="https://v-legal.ru/" />
 
-    <!-- Шрифты -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Евгений Выговский | Юрист по спорам с застройщиками"
+    />
+    <meta
+      property="og:description"
+      content="Знаю аргументы застройщика изнутри. 20 лет практики. Взыскание неустойки и устранение недостатков."
+    />
+    <meta property="og:image" content="https://v-legal.ru/og-image.jpg" />
+    <meta property="og:url" content="https://v-legal.ru/" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,14 +33,72 @@
       rel="stylesheet"
     />
 
-    <!-- Подключение стилей -->
     <link rel="stylesheet" href="styles/style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "name": "Евгений Выговский",
+            "jobTitle": "Юрист по спорам с застройщиками",
+            "description": "Руководитель юридической службы крупной девелоперской компании с 20-летним опытом.",
+            "telephone": "+74950000000",
+            "email": "evgeny@v-legal.ru"
+          },
+          {
+            "@type": "LegalService",
+            "name": "Юридическая помощь дольщикам и собственникам",
+            "areaServed": "RU",
+            "priceRange": "от 5000 RUB"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Что делать, если застройщик банкротится?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Это не тупик. Я имею опыт включения требований в реестр кредиторов. Даже при банкротстве можно вернуть деньги или квартиру."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Правда ли, что суды по 214-ФЗ длятся годами?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Только если тянуть время. Я выбираю агрессивную стратегию, чтобы сократить сроки до 2-4 месяцев."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Какой срок исковой давности по спорам с застройщиком?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Общий срок исковой давности составляет 3 года. По качеству квартиры срок начинает течь с момента передачи, по неустойке — с даты, указанной в ДДУ."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Можно ли взыскать деньги, если я уже сделал ремонт за свой счет?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Да, при условии сохранения доказательств: акта о недостатках, чеков, договоров с подрядчиками, фото- и видеофиксации."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- HEADER -->
     <header class="container site-header">
       <a href="/" class="logo"
-        >Евгений Выговский <span>| Споры с застройщиками</span></a
+        >Евгений Выговский |<span> Споры с застройщиками</span></a
       >
       <div class="header-right">
         <div class="contacts">
@@ -32,8 +106,7 @@
           <a href="mailto:evgeny@v-legal.ru">evgeny@v-legal.ru</a>
         </div>
         <button
-          class="btn-primary btn-accent"
-          id="openPopupBtn"
+          class="btn-primary btn-accent open-popup-btn"
           aria-haspopup="dialog"
           aria-expanded="false"
         >
@@ -75,13 +148,15 @@
             >
           </div>
         </div>
-        <button class="btn-primary btn-accent" id="openPopupBtn2">
+        <button class="btn-primary btn-accent open-popup-btn">
           Получить прогноз по моему делу →
         </button>
       </div>
       <div class="hero-image">
         <div class="placeholder" role="img" aria-label="Фотография юриста">
-          .<img src="images/main.png" />
+          <span
+            >Место для вашего профессионального фото<br />в деловом стиле</span
+          >
         </div>
         <div class="hero-badge">
           <strong>20+ лет практики</strong>
@@ -147,6 +222,10 @@
             системы — в крупной девелоперской компании. Я знаю, какие аргументы
             реально пугают их юридический отдел.
           </p>
+          <p>
+            Поэтому при анализе вашей ситуации я оцениваю её не только с позиции
+            клиента, но и моделирую ответные ходы оппонента.
+          </p>
           <div class="expertise-conclusion">
             Это дает возможность ещё до суда определить слабые места позиции
             застройщика и выбрать стратегию, которая сэкономит вам нервы и
@@ -172,59 +251,413 @@
       </div>
     </section>
 
-    <!-- PRICE -->
+    <!-- TASKS -->
     <section class="section bg-alt">
       <div class="container">
-        <div class="section-label">Прозрачные условия</div>
-        <h2 class="section-title">Сколько стоит защита ваших прав?</h2>
-        <div class="price-cards">
-          <div class="price-card">
-            <h4>1. Анализ документов</h4>
-            <div class="price">от 5 000 ₽</div>
+        <div class="section-label">Специализация</div>
+        <h2 class="section-title">Что я делаю в спорах с застройщиками?</h2>
+        <div class="tasks-grid">
+          <div class="task-item">
+            <span class="icon">🚫</span>
+            <div>
+              <strong>Принуждаю к гарантийному ремонту</strong
+              ><span
+                >Заставляю устранять строительные недостатки капитально, а не
+                «замазывать» косметикой.</span
+              >
+            </div>
+          </div>
+          <div class="task-item">
+            <span class="icon">💰</span>
+            <div>
+              <strong>Возвращаю деньги по ДДУ</strong
+              ><span
+                >Расторгаем договор с выплатой полной стоимости и процентов за
+                пользование вашими средствами.</span
+              >
+            </div>
+          </div>
+          <div class="task-item">
+            <span class="icon">📆</span>
+            <div>
+              <strong>Взыскиваю неустойку за просрочку</strong
+              ><span
+                >Получаем законные проценты за каждый день, а не навязанную
+                «копеечную» выплату.</span
+              >
+            </div>
+          </div>
+          <div class="task-item">
+            <span class="icon">🛡️</span>
+            <div>
+              <strong>Удваиваю сумму взыскания</strong
+              ><span
+                >Добавляем компенсацию морального вреда и штраф 50% по закону о
+                защите прав потребителей.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="container section">
+      <div class="section-label">Процесс</div>
+      <h2 class="section-title">4 шага к защите ваших интересов</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="num">01</div>
+          <h4>Анализ документов</h4>
+          <p>
+            Вы присылаете ДДУ, Акт приема-передачи, переписку и фото. Я оцениваю
+            перспективы без «воды».
+          </p>
+        </div>
+        <div class="step">
+          <div class="num">02</div>
+          <h4>Экспертиза позиции</h4>
+          <p>
+            Я смотрю на дело глазами судьи и глазами застройщика. Даю точный
+            прогноз сумм и сроков.
+          </p>
+        </div>
+        <div class="step">
+          <div class="num">03</div>
+          <h4>Стратегия</h4>
+          <p>
+            Вы получаете четкий план: досудебная претензия или сразу иск, с
+            пошаговым расчетом расходов.
+          </p>
+        </div>
+        <div class="step">
+          <div class="num">04</div>
+          <h4>Сопровождение</h4>
+          <p>
+            От подачи документов до получения исполнительного листа и контроля
+            списания денег со счетов застройщика.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🆕 SEO-БЛОК: ПРАВОВАЯ ОСНОВА -->
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="section-label">Правовая основа</div>
+        <h2 class="section-title">
+          Что говорит закон о правах дольщиков и собственников
+        </h2>
+        <div class="legal-content">
+          <div class="legal-block">
+            <h3>📜 Федеральный закон № 214-ФЗ</h3>
             <p>
-              Персональная консультация с письменным прогнозом перспектив дела.
+              Закон о долевом строительстве защищает участников долевого
+              строительства. Если застройщик нарушает сроки передачи квартиры,
+              вы имеете право на
+              <strong>неустойку в размере 1/150 ставки ЦБ РФ</strong> от
+              стоимости жилья за каждый день просрочки. Для граждан эта сумма
+              удваивается.
+            </p>
+            <p>
+              При существенных недостатках квартиры или нарушении сроков более
+              чем на 2 месяца дольщик вправе
+              <strong>в одностороннем порядке отказаться от ДДУ</strong> и
+              потребовать возврата денег с процентами.
             </p>
           </div>
-          <div class="price-card featured">
-            <h4>2. Ведение дела «Под ключ»</h4>
-            <div class="price">Индивидуально</div>
+          <div class="legal-block">
+            <h3>🛡️ Закон «О защите прав потребителей» (ЗоЗПП)</h3>
             <p>
-              Полное сопровождение: претензия, иск, все суды и контроль ФССП.
-              Возможна рассрочка.
+              Споры с застройщиками подпадают под действие ЗоЗПП, что дает
+              дольщикам серьезные преимущества:
             </p>
+            <ul>
+              <li>
+                <strong>Освобождение от госпошлины</strong> при цене иска до 1
+                млн рублей
+              </li>
+              <li>
+                <strong>Альтернативная подсудность</strong> — можно подать иск
+                по месту своего жительства
+              </li>
+              <li>
+                <strong>Штраф 50%</strong> от присужденной суммы в пользу
+                потребителя, если застройщик отказался добровольно удовлетворить
+                требования
+              </li>
+              <li>
+                <strong>Компенсация морального вреда</strong> — от 5 000 до 50
+                000 рублей
+              </li>
+            </ul>
           </div>
-          <div class="price-card">
-            <h4>3. Гонорар успеха</h4>
-            <div class="price">% от взыскания</div>
+          <div class="legal-block">
+            <h3>⏰ Сроки обращения в суд</h3>
             <p>
-              Оплата по факту получения денег. Обсуждается только по делам с
-              высокой вероятностью победы.
+              Общий <strong>срок исковой давности — 3 года</strong> (ст. 196 ГК
+              РФ). Важно понимать, с какого момента он начинает течь:
+            </p>
+            <ul>
+              <li>
+                По неустойке за просрочку — с даты, указанной в ДДУ как срок
+                передачи квартиры
+              </li>
+              <li>
+                По качеству квартиры — с момента подписания акта приема-передачи
+              </li>
+              <li>
+                По гарантийным обязательствам — в течение гарантийного срока
+                (минимум 5 лет на конструктив, 3 года на инженерные системы)
+              </li>
+            </ul>
+            <p>
+              <strong>Важно:</strong> не откладывайте обращение. Чем раньше
+              начать, тем больше сумма взыскания и выше шансы на успех.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- 🆕 SEO-БЛОК: ТИПИЧНЫЕ ОШИБКИ -->
     <section class="container section">
-      <div class="section-label">Вопросы и ответы</div>
-      <h2 class="section-title">Коротко о главном</h2>
-      <div class="faq-item">
-        <div class="question">
-          Что делать, если застройщик банкротится? <span>+</span>
+      <div class="section-label">Важно знать</div>
+      <h2 class="section-title">
+        5 типичных ошибок дольщиков, которые стоят им денег
+      </h2>
+      <div class="mistakes-grid">
+        <div class="mistake-item">
+          <div class="mistake-num">01</div>
+          <div>
+            <strong>Подписание акта приема без замечаний</strong>
+            <p>
+              Если вы подписали акт приема-передачи без замечаний, доказать
+              наличие недостатков будет крайне сложно. Всегда составляйте
+              дефектную ведомость.
+            </p>
+          </div>
         </div>
-        <div class="answer">
-          Это не тупик. Я имею опыт включения требований в реестр кредиторов.
-          Даже при банкротстве можно вернуть деньги или квартиру.
+        <div class="mistake-item">
+          <div class="mistake-num">02</div>
+          <div>
+            <strong>Согласие на «мировое» от застройщика</strong>
+            <p>
+              Застройщик предлагает выплатить 10-20% от реальной суммы
+              неустойки, чтобы закрыть вопрос. Не подписывайте ничего без
+              консультации юриста.
+            </p>
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-num">03</div>
+          <div>
+            <strong>Пропуск срока исковой давности</strong>
+            <p>
+              3 года пролетают незаметно. Если вы ждете «пока застройщик
+              одумается», вы теряете право на взыскание.
+            </p>
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-num">04</div>
+          <div>
+            <strong>Самостоятельный ремонт до претензии</strong>
+            <p>
+              Если вы устранили недостатки за свой счет без фиксации и
+              досудебной претензии, взыскать расходы будет почти невозможно.
+            </p>
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-num">05</div>
+          <div>
+            <strong>Отсутствие письменной переписки</strong>
+            <p>
+              Звонки и устные обещания не имеют юридической силы. Все требования
+              и ответы — только письменно, с отметкой о вручении.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="faq-item">
-        <div class="question">
-          Правда ли, что суды по 214-ФЗ длятся годами? <span>+</span>
+    </section>
+
+    <!-- 🆕 SEO-БЛОК: КОМУ ПОДХОДИТ -->
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="section-label">Целевая аудитория</div>
+        <h2 class="section-title">Кому подойдет моя помощь</h2>
+        <div class="audience-grid">
+          <div class="audience-card">
+            <span class="audience-icon">🏢</span>
+            <h4>Дольщики по 214-ФЗ</h4>
+            <p>
+              Вы купили квартиру в строящемся доме по договору долевого участия.
+              Застройщик нарушает сроки, качество или условия договора.
+            </p>
+          </div>
+          <div class="audience-card">
+            <span class="audience-icon">🔑</span>
+            <h4>Собственники новых квартир</h4>
+            <p>
+              Вы приняли квартиру в новостройке и обнаружили недостатки.
+              Гарантийный срок еще не истек, и вы хотите обязать застройщика
+              устранить их.
+            </p>
+          </div>
+          <div class="audience-card">
+            <span class="audience-icon">📋</span>
+            <h4>Те, кто получил отказ</h4>
+            <p>
+              Вы уже направляли претензию застройщику, но получили формальную
+              отписку или предложение выплатить символическую сумму.
+            </p>
+          </div>
+          <div class="audience-card">
+            <span class="audience-icon">⚖️</span>
+            <h4>Участники банкротства</h4>
+            <p>
+              Застройщик признан банкротом, и вы хотите включить свои требования
+              в реестр кредиторов или получить квартиру через механизмы закона.
+            </p>
+          </div>
         </div>
-        <div class="answer">
-          Только если тянуть время. Я выбираю стратегию с подачей ускоренных
-          заявлений, чтобы уложиться в 2–4 месяца.
+      </div>
+    </section>
+
+    <!-- PRICE -->
+    <section class="container section">
+      <div class="section-label">Прозрачные условия</div>
+      <h2 class="section-title">Сколько стоит защита ваших прав?</h2>
+      <div class="price-cards">
+        <div class="price-card">
+          <h4>1. Анализ документов</h4>
+          <div class="price">от 5 000 ₽</div>
+          <p>
+            Персональная консультация с письменным прогнозом перспектив дела.
+          </p>
+        </div>
+        <div class="price-card featured">
+          <h4>2. Ведение дела «Под ключ»</h4>
+          <div class="price">Индивидуально</div>
+          <p>
+            Полное сопровождение: претензия, иск, все суды и контроль ФССП.
+            Возможна рассрочка.
+          </p>
+        </div>
+        <div class="price-card">
+          <h4>3. Гонорар успеха</h4>
+          <div class="price">% от взыскания</div>
+          <p>
+            Оплата по факту получения денег. Обсуждается только по делам с
+            высокой вероятностью победы.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="section-label">Вопросы и ответы</div>
+        <h2 class="section-title">Коротко о главном</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Что делать, если застройщик банкротится?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Это не тупик. Я имею опыт включения требований в реестр
+                  кредиторов. Даже при банкротстве можно вернуть деньги или
+                  квартиру, если действовать быстро и правильно оформить
+                  требование.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Правда ли, что суды по 214-ФЗ длятся годами?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Только если тянуть время или допускать процессуальные ошибки.
+                  Я выбираю стратегию с подачей ускоренных заявлений и жестким
+                  контролем сроков, чтобы уложиться в 2–4 месяца.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Вы работаете в моем городе?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Да. Споры подсудны по месту нахождения застройщика или объекта
+                  строительства. Я работаю дистанционно по всей РФ, мое
+                  физическое присутствие в вашем городе не требуется.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Какой срок исковой давности по спорам с застройщиком?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Общий срок исковой давности составляет 3 года. По требованиям
+                  о качестве квартиры срок начинает течь с момента передачи
+                  квартиры, а по неустойке за просрочку — с даты, указанной в
+                  ДДУ.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span
+                >Можно ли взыскать деньги, если я уже сделал ремонт за свой
+                счет?</span
+              >
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Да, но при условии сохранения доказательств: акта о
+                  недостатках, чеков, договоров с подрядчиками, фото- и
+                  видеофиксации. Если вы все это сохранили — шансы на взыскание
+                  высокие.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Нужно ли мне лично присутствовать в суде?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Нет. По нотариальной доверенности я представляю ваши интересы
+                  во всех инстанциях без вашего участия. Вам достаточно один раз
+                  подписать документы у нотариуса.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -241,7 +674,26 @@
         </p>
 
         <div class="cta-form">
-          <form name="final-cta" method="POST" action="/submit">
+          <form
+            class="contact-form"
+            action="send.php"
+            method="POST"
+            enctype="multipart/form-data"
+            novalidate
+          >
+            <input
+              type="hidden"
+              name="form_name"
+              value="Форма с главной страницы"
+            />
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="botcheck"
+              tabindex="-1"
+              autocomplete="off"
+            />
+
             <div class="form-row">
               <div class="form-group">
                 <label for="final-phone">Ваш номер телефона</label>
@@ -251,6 +703,7 @@
                   name="phone"
                   required
                   placeholder="+7 (999) 000-00-00"
+                  pattern="[\+]?[0-9\s\-\(\)]{10,20}"
                 />
               </div>
               <div class="form-group">
@@ -264,12 +717,44 @@
                 />
               </div>
             </div>
+
+            <div class="form-group">
+              <label>Загрузите документы (необязательно)</label>
+              <div class="file-upload-wrapper">
+                <input
+                  type="file"
+                  id="final-file"
+                  name="attachment[]"
+                  multiple
+                  accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+                />
+                <div class="file-upload-label">
+                  <span class="icon">📎</span>
+                  <span class="file-name-display"
+                    >Нажмите или перетащите файлы</span
+                  >
+                  <div class="file-hint">PDF, JPG, PNG, DOC до 10 МБ</div>
+                </div>
+              </div>
+            </div>
+
+            <label class="privacy-checkbox">
+              <input type="checkbox" name="privacy" required />
+              <span
+                >Я согласен с
+                <a href="#" class="open-privacy-popup" role="button"
+                  >политикой обработки персональных данных</a
+                ></span
+              >
+            </label>
+
             <button
               type="submit"
-              class="btn-primary btn-accent"
+              class="btn-primary btn-accent submit-btn"
               style="width: 100%"
             >
-              Получить предварительный расчет →
+              <span class="btn-text">Получить предварительный расчет →</span>
+              <span class="btn-loader" aria-hidden="true">Отправка...</span>
             </button>
             <div class="security-note">
               🔒 Ваши данные защищены и не передаются третьим лицам.
@@ -297,21 +782,24 @@
       <div class="footer-links">
         <a href="mailto:evgeny@v-legal.ru">evgeny@v-legal.ru</a>
         <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+        <a href="#" class="open-privacy-popup" role="button"
+          >Политика обработки персональных данных</a
+        >
       </div>
     </footer>
 
-    <!-- POPUP -->
+    <!-- POPUP: КОНСУЛЬТАЦИЯ -->
     <div
       class="popup-overlay"
-      id="popupOverlay"
+      id="consultPopup"
       role="dialog"
       aria-modal="true"
       aria-labelledby="popup-title"
     >
       <div class="popup-modal">
+        <div class="popup-handle" aria-hidden="true"></div>
         <button
-          class="popup-close"
-          id="closePopupBtn"
+          class="popup-close close-popup-btn"
           aria-label="Закрыть модальное окно"
         >
           ✕
@@ -327,7 +815,22 @@
           Оставьте контакты, я свяжусь с вами для первичного анализа ситуации.
         </p>
 
-        <form name="popup-form" method="POST" action="/submit">
+        <form
+          class="contact-form"
+          action="send.php"
+          method="POST"
+          enctype="multipart/form-data"
+          novalidate
+        >
+          <input type="hidden" name="form_name" value="Модальное окно" />
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="botcheck"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
           <div class="form-group">
             <label for="popup-name">Ваше имя</label>
             <input
@@ -346,14 +849,27 @@
               name="phone"
               required
               placeholder="+7 (999) 000-00-00"
+              pattern="[\+]?[0-9\s\-\(\)]{10,20}"
             />
           </div>
+
+          <label class="privacy-checkbox">
+            <input type="checkbox" name="privacy" required />
+            <span
+              >Я согласен с
+              <a href="#" class="open-privacy-popup" role="button"
+                >политикой обработки персональных данных</a
+              ></span
+            >
+          </label>
+
           <button
             type="submit"
-            class="btn-primary btn-accent"
+            class="btn-primary btn-accent submit-btn"
             style="width: 100%"
           >
-            Отправить на анализ →
+            <span class="btn-text">Отправить на анализ →</span>
+            <span class="btn-loader" aria-hidden="true">Отправка...</span>
           </button>
           <div class="security-note" style="margin-top: 16px">
             🔒 Ваши данные защищены.
@@ -362,7 +878,169 @@
       </div>
     </div>
 
-    <!-- Подключение скриптов -->
+    <!-- 🆕 POPUP: УСПЕХ (вместо thanks.html) -->
+    <div
+      class="popup-overlay success-overlay"
+      id="successPopup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="success-title"
+    >
+      <div class="popup-modal success-modal">
+        <div class="popup-handle" aria-hidden="true"></div>
+        <button class="popup-close close-popup-btn" aria-label="Закрыть">
+          ✕
+        </button>
+        <div class="success-icon">✅</div>
+        <h2
+          class="section-title"
+          id="success-title"
+          style="font-size: 1.8rem; margin-bottom: 12px; text-align: center"
+        >
+          Заявка принята!
+        </h2>
+        <p
+          class="section-desc"
+          style="font-size: 1rem; margin-bottom: 0; text-align: center"
+        >
+          Спасибо за обращение. Я свяжусь с вами в течение рабочего дня для
+          первичного анализа вашей ситуации.
+        </p>
+        <div class="success-features">
+          <div class="success-feature">
+            <span>📞</span>
+            <div>
+              <strong>Перезвоню лично</strong>
+              <p>
+                Без менеджеров и скриптов — разберем вашу ситуацию напрямую.
+              </p>
+            </div>
+          </div>
+          <div class="success-feature">
+            <span>📋</span>
+            <div>
+              <strong>Дам честный прогноз</strong>
+              <p>Если дело бесперспективно — скажу сразу, без оплаты.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🆕 PRIVACY POLICY POPUP -->
+    <div
+      class="popup-overlay privacy-overlay"
+      id="privacyPopup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="privacy-title"
+    >
+      <div class="popup-modal privacy-modal">
+        <div class="popup-handle" aria-hidden="true"></div>
+        <button class="popup-close close-popup-btn" aria-label="Закрыть">
+          ✕
+        </button>
+
+        <h2
+          class="section-title"
+          id="privacy-title"
+          style="font-size: 1.6rem; margin-bottom: 8px; padding-right: 40px"
+        >
+          Политика обработки персональных данных
+        </h2>
+        <div class="privacy-date">Дата публикации: 26 августа 2026 г.</div>
+
+        <div class="privacy-content">
+          <section class="privacy-section">
+            <h3>1. Общие положения</h3>
+            <p>
+              Настоящая Политика определяет порядок обработки персональных
+              данных пользователей сайта и меры по обеспечению их безопасности.
+              Оператор: Выговский Евгений Александрович.
+            </p>
+          </section>
+
+          <section class="privacy-section">
+            <h3>2. Какие данные мы собираем</h3>
+            <ul>
+              <li>Фамилия, имя</li>
+              <li>Контактный телефон</li>
+              <li>Адрес электронной почты (при указании)</li>
+              <li>Документы, загружаемые пользователем (ДДУ, акты, фото)</li>
+              <li>Технические данные: IP-адрес, время обращения</li>
+            </ul>
+          </section>
+
+          <section class="privacy-section">
+            <h3>3. Цели обработки</h3>
+            <ul>
+              <li>Обработка входящих заявок и связь с пользователем</li>
+              <li>Предоставление юридических консультаций</li>
+              <li>Заключение и исполнение договоров на оказание услуг</li>
+            </ul>
+          </section>
+
+          <section class="privacy-section">
+            <h3>4. Правовые основания</h3>
+            <p>
+              Обработка осуществляется в соответствии с Федеральным законом от
+              27.07.2006 № 152-ФЗ «О персональных данных» на основании согласия
+              субъекта (ст. 6 ФЗ-152).
+            </p>
+          </section>
+
+          <section class="privacy-section">
+            <h3>5. Срок хранения</h3>
+            <p>
+              Данные обрабатываются в течение срока, необходимого для достижения
+              целей обработки, но не более 3 лет с момента последнего обращения.
+              По истечении срока — удаляются.
+            </p>
+          </section>
+
+          <section class="privacy-section">
+            <h3>6. Передача третьим лицам</h3>
+            <p>
+              Оператор не передает персональные данные третьим лицам, за
+              исключением случаев, предусмотренных законодательством РФ.
+            </p>
+          </section>
+
+          <section class="privacy-section">
+            <h3>7. Ваши права</h3>
+            <ul>
+              <li>Получить информацию о своих персональных данных</li>
+              <li>Требовать уточнения, блокирования или уничтожения данных</li>
+              <li>Отозвать согласие на обработку</li>
+              <li>Обратиться с жалобой в Роскомнадзор</li>
+            </ul>
+          </section>
+
+          <section class="privacy-section">
+            <h3>8. Безопасность</h3>
+            <p>
+              Оператор принимает необходимые организационные и технические меры
+              для защиты данных от неправомерного или случайного доступа,
+              уничтожения, изменения, блокирования, копирования и
+              распространения.
+            </p>
+          </section>
+
+          <section class="privacy-section">
+            <h3>9. Контакты</h3>
+            <p>
+              Email: <a href="mailto:evgeny@v-legal.ru">evgeny@v-legal.ru</a
+              ><br />
+              Телефон: <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast-уведомление -->
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
     <script src="scripts/script.js" defer></script>
   </body>
 </html>
