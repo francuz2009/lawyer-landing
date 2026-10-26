@@ -24,7 +24,13 @@
       content="Знаем аргументы кубанских застройщиков изнутри. Взыскание неустойки и устранение недостатков новостроек в Краснодаре, Сочи, Анапе и крае."
     />
     <meta property="og:image" content="https://v-legal.ru/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Споры с застройщиком? Юридическая поддержка дольщиков — Краснодар и край" />
     <meta property="og:url" content="https://v-legal.ru/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preload" as="image" href="images/main.webp" type="image/webp" fetchpriority="high" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,6 +40,15 @@
     />
 
     <link rel="stylesheet" href="styles/style.css" />
+    <noscript>
+      <style>
+        [data-rv], [data-rv-left], [data-rv-right], [data-rv-zoom], [data-hero] {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+        .marquee-track { animation: none !important; }
+      </style>
+    </noscript>
 
     <script type="application/ld+json">
       {
@@ -98,10 +113,14 @@
     </script>
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
     <!-- HEADER -->
-    <header class="container site-header">
-      <a href="/" class="logo"
-        >Юридическая поддержка дольщиков |<span> Краснодар и край</span></a
+    <header class="container site-header" id="top">
+      <a href="#top" class="logo"
+        ><span class="logo-main">Юридическая поддержка дольщиков</span>
+        <span class="logo-sep" aria-hidden="true">|</span>
+        <span class="logo-sub">Краснодар и край</span></a
       >
       <div class="header-right">
         <div class="contacts">
@@ -118,396 +137,979 @@
       </div>
     </header>
 
-    <!-- HERO -->
-    <section class="container hero">
-      <div class="hero-content">
-        <h1>
-          Застройщик в Краснодаре нарушил ваши права? Мы знаем, как заставить его ответить.
-        </h1>
-        <p class="sub">
-          Команда юристов с опытом работы в строительной отрасли Кубани. Ведём
-          дела против застройщиков Краснодара, Сочи, Анапы и края. Понимаем
-          логику кубанских девелоперов изнутри.
-        </p>
-        <div class="hero-utp">
-          <div class="utp-item">
-            <span class="icon">🏛️</span>
-            <span
-              >Знаем «скелеты в шкафу» кубанских застройщиков: ССК, Dogma,
-              «Точно», «Метрикс Development», «Кубанская строительная
-              компания».</span
-            >
-          </div>
-          <div class="utp-item">
-            <span class="icon">⚖️</span>
-            <span
-              >Узкая специализация: только 214-ФЗ, гарантийные сроки и качество
-              новостроек в Краснодарском крае.</span
-            >
-          </div>
-          <div class="utp-item">
-            <span class="icon">📋</span>
-            <span
-              >Гонорар успеха или рассрочка: берём только те дела, где видим
-              реальную перспективу в судах Кубани.</span
-            >
-          </div>
-        </div>
-        <button class="btn-primary btn-accent open-popup-btn">
-          Получить прогноз по моему делу →
-        </button>
-      </div>
-      <div class="hero-image">
-        <div class="placeholder" role="img" aria-label="Фотография команды юристов">
-          <span
-            >Место для фото команды<br />в деловом стиле</span
-          >
-        </div>
-        <div class="hero-badge">
-          <strong>20+ лет практики</strong>
-          <span>в сфере недвижимости и строительства на Кубани</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRIGGERS -->
-    <section class="section bg-alt">
-      <div class="container">
-        <div class="section-label">Знакомая ситуация</div>
-        <h2 class="section-title">
-          Спор с застройщиком в Краснодарском крае — это всегда одно и то же
-        </h2>
-        <ul class="triggers-list">
-          <li>
-            <span class="emoji">❌</span>
-            <div>
-              <strong>Отписки вместо ответа</strong> На претензии приходят
-              формальные письма, а сроки затягиваются.
-            </div>
-          </li>
-          <li>
-            <span class="emoji">🏚️</span>
-            <div>
-              <strong>Кривые стены и щели</strong> Застройщик отказывается
-              признавать недостатки или предлагает «косметический» ремонт.
-            </div>
-          </li>
-          <li>
-            <span class="emoji">📆</span>
-            <div>
-              <strong>Просрочка сдачи</strong> Дом построен, но ключи не дают, а
-              неустойку предлагают по заниженной ставке.
-            </div>
-          </li>
-          <li>
-            <span class="emoji">💸</span>
-            <div>
-              <strong>Страх судебных издержек</strong> Кажется, что адвокаты и
-              экспертизы съедят больше, чем вы получите.
-            </div>
-          </li>
-        </ul>
-        <div class="trigger-result">
-          <span>💡</span> Хватит гадать. Нужен холодный расчёт рисков с двух
-          сторон — вашей и кубанского застройщика.
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERTISE -->
-    <section class="container section">
-      <div class="section-label">Наше преимущество</div>
-      <h2 class="section-title">
-        Почему мы видим спор иначе, чем обычный юрист?
-      </h2>
-      <div class="expertise-grid">
-        <div class="left">
-          <p>
-            Мы не просто изучали 214-ФЗ по учебникам. Наша команда много лет
-            работала внутри строительной системы Краснодарского края — в
-            девелоперских компаниях и юридических службах кубанских
-            застройщиков. Мы знаем, какие аргументы реально пугают их
-            юридический отдел.
+    <main>
+      <!-- HERO -->
+      <section class="container hero">
+        <div class="hero-content">
+          <h1 data-hero="1">
+            Застройщик в Краснодаре нарушил ваши права? Мы знаем, как заставить его ответить.
+          </h1>
+          <p class="sub" data-hero="2">
+            Команда юристов с опытом работы в строительной отрасли Кубани. Ведём
+            дела против застройщиков Краснодара, Сочи, Анапы и края. Понимаем
+            логику кубанских девелоперов изнутри.
           </p>
-          <p>
-            Поэтому при анализе вашей ситуации мы оцениваем её не только с
-            позиции клиента, но и моделируем ответные ходы оппонента — с учётом
-            практики Краснодарского краевого суда.
-          </p>
-          <div class="expertise-conclusion">
-            Это даёт возможность ещё до суда определить слабые места позиции
-            застройщика и выбрать стратегию, которая сэкономит вам нервы и
-            деньги.
+          <div class="hero-utp" data-hero="3">
+            <div class="utp-item">
+              <span class="icon">🏛️</span>
+              <span
+                >Знаем «скелеты в шкафу» кубанских застройщиков: ССК, Dogma,
+                «Точно», «Метрикс Development», «Кубанская строительная
+                компания».</span
+              >
+            </div>
+            <div class="utp-item">
+              <span class="icon">⚖️</span>
+              <span
+                >Узкая специализация: только 214-ФЗ, гарантийные сроки и качество
+                новостроек в Краснодарском крае.</span
+              >
+            </div>
+            <div class="utp-item">
+              <span class="icon">📋</span>
+              <span
+                >Гонорар успеха или рассрочка: берём только те дела, где видим
+                реальную перспективу в судах Кубани.</span
+              >
+            </div>
+          </div>
+          <div data-hero="4">
+            <button class="btn-primary btn-accent open-popup-btn">
+              Получить прогноз по моему делу →
+            </button>
+            <p class="hero-note">Бесплатно · 24 часа · без обязательств</p>
           </div>
         </div>
-        <div class="right">
-          <ul>
-            <li>
-              <span class="icon">🔍</span> Знаем, как кубанский застройщик
-              формирует доказательную базу, чтобы законно отказать вам.
+        <div class="hero-image" data-hero="5">
+          <picture>
+            <source srcset="images/main.webp" type="image/webp" />
+            <img
+              class="hero-photo"
+              src="images/main.png"
+              alt="Ведущий юрист команды по спорам с застройщиками в Краснодаре"
+              width="832"
+              height="1088"
+              fetchpriority="high"
+            />
+          </picture>
+          <div class="hero-badge">
+            <strong>20+ лет практики</strong>
+            <span>в сфере недвижимости и строительства на Кубани</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE: застройщики -->
+      <div class="marquee-band" aria-label="Знаем практику кубанских застройщиков">
+        <div class="marquee-track">
+          <span class="marquee-item lead">Знаем практику кубанских застройщиков</span>
+          <span class="marquee-item">ССК</span>
+          <span class="marquee-dot">•</span>
+          <span class="marquee-item">Dogma</span>
+          <span class="marquee-dot">•</span>
+          <span class="marquee-item">«Точно»</span>
+          <span class="marquee-dot">•</span>
+          <span class="marquee-item">«Метрикс Development»</span>
+          <span class="marquee-dot">•</span>
+          <span class="marquee-item">«Кубанская строительная компания»</span>
+          <span class="marquee-dot">•</span>
+          <span class="marquee-item lead">Знаем практику кубанских застройщиков</span>
+          <span class="marquee-item">ССК</span>
+          <span class="marquee-dot">•</span>
+          <span class="marquee-item">Dogma</span>
+          <span class="marquee-dot">•</span>
+          <span class="marquee-item">«Точно»</span>
+          <span class="marquee-dot">•</span>
+          <span class="marquee-item">«Метрикс Development»</span>
+          <span class="marquee-dot">•</span>
+          <span class="marquee-item">«Кубанская строительная компания»</span>
+          <span class="marquee-dot">•</span>
+        </div>
+      </div>
+
+      <!-- TRIGGERS -->
+      <section class="section bg-alt">
+        <div class="container">
+          <div class="section-label" data-rv>Знакомая ситуация</div>
+          <h2 class="section-title" data-rv>
+            Спор с застройщиком в Краснодарском крае — это всегда одно и то же
+          </h2>
+          <ul class="triggers-list" data-rv-stagger>
+            <li data-rv>
+              <span class="emoji">❌</span>
+              <div>
+                <strong>Отписки вместо ответа</strong> На претензии приходят
+                формальные письма, а сроки затягиваются.
+              </div>
             </li>
-            <li>
-              <span class="icon">🧪</span> Понимаем, какие строительные
-              экспертизы они заказывают и как их грамотно оспорить в судах
-              Краснодара.
+            <li data-rv>
+              <span class="emoji">🏚️</span>
+              <div>
+                <strong>Кривые стены и щели</strong> Застройщик отказывается
+                признавать недостатки или предлагает «косметический» ремонт.
+              </div>
             </li>
-            <li>
-              <span class="icon">⏳</span> Видим, какую тактику они используют,
-              чтобы затянуть время до мирового соглашения.
+            <li data-rv>
+              <span class="emoji">📆</span>
+              <div>
+                <strong>Просрочка сдачи</strong> Дом построен, но ключи не дают, а
+                неустойку предлагают по заниженной ставке.
+              </div>
+            </li>
+            <li data-rv>
+              <span class="emoji">💸</span>
+              <div>
+                <strong>Страх судебных издержек</strong> Кажется, что адвокаты и
+                экспертизы съедят больше, чем вы получите.
+              </div>
             </li>
           </ul>
+          <div class="trigger-result" data-rv>
+            <span>💡</span> Хватит гадать. Нужен холодный расчёт рисков с двух
+            сторон — вашей и кубанского застройщика.
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- TASKS -->
-    <section class="section bg-alt">
-      <div class="container">
-        <div class="section-label">Специализация</div>
-        <h2 class="section-title">Что мы делаем в спорах с застройщиками Краснодарского края?</h2>
-        <div class="tasks-grid">
-          <div class="task-item">
-            <span class="icon">🚫</span>
-            <div>
-              <strong>Принуждаем к гарантийному ремонту</strong
-              ><span
-                >Заставляем устранять строительные недостатки капитально, а не
-                «замазывать» косметикой.</span
-              >
-            </div>
-          </div>
-          <div class="task-item">
-            <span class="icon">💰</span>
-            <div>
-              <strong>Возвращаем деньги по ДДУ</strong
-              ><span
-                >Расторгаем договор с выплатой полной стоимости и процентов за
-                пользование вашими средствами.</span
-              >
-            </div>
-          </div>
-          <div class="task-item">
-            <span class="icon">📆</span>
-            <div>
-              <strong>Взыскиваем неустойку за просрочку</strong
-              ><span
-                >Получаем законные проценты за каждый день, а не навязанную
-                «копеечную» выплату.</span
-              >
-            </div>
-          </div>
-          <div class="task-item">
-            <span class="icon">🛡️</span>
-            <div>
-              <strong>Удваиваем сумму взыскания</strong
-              ><span
-                >Добавляем компенсацию морального вреда и штраф 50% по закону о
-                защите прав потребителей.</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STEPS -->
-    <section class="container section">
-      <div class="section-label">Процесс</div>
-      <h2 class="section-title">4 шага к защите ваших интересов в Краснодаре и крае</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="num">01</div>
-          <h4>Анализ документов</h4>
-          <p>
-            Вы присылаете ДДУ, Акт приёма-передачи, переписку и фото. Мы оцениваем
-            перспективы без «воды».
-          </p>
-        </div>
-        <div class="step">
-          <div class="num">02</div>
-          <h4>Экспертиза позиции</h4>
-          <p>
-            Мы смотрим на дело глазами судьи Краснодарского краевого суда и
-            глазами застройщика. Даём точный прогноз сумм и сроков.
-          </p>
-        </div>
-        <div class="step">
-          <div class="num">03</div>
-          <h4>Стратегия</h4>
-          <p>
-            Вы получаете чёткий план: досудебная претензия или сразу иск, с
-            пошаговым расчётом расходов.
-          </p>
-        </div>
-        <div class="step">
-          <div class="num">04</div>
-          <h4>Сопровождение</h4>
-          <p>
-            От подачи документов до получения исполнительного листа и контроля
-            списания денег со счетов застройщика.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ПРАВОВАЯ ОСНОВА -->
-    <section class="section bg-alt">
-      <div class="container">
-        <div class="section-label">Правовая основа</div>
-        <h2 class="section-title">
-          Что говорит закон о правах дольщиков и собственников в Краснодарском крае
+      <!-- EXPERTISE -->
+      <section class="container section">
+        <div class="section-label" data-rv>Наше преимущество</div>
+        <h2 class="section-title" data-rv>
+          Почему мы видим спор иначе, чем обычный юрист?
         </h2>
-        <div class="legal-content">
-          <div class="legal-block">
-            <h3>📜 Федеральный закон № 214-ФЗ</h3>
-            <p>
-              Закон о долевом строительстве защищает участников долевого
-              строительства. Если застройщик нарушает сроки передачи квартиры,
-              вы имеете право на
-              <strong>неустойку в размере 1/150 ставки ЦБ РФ</strong> от
-              стоимости жилья за каждый день просрочки. Для граждан эта сумма
-              удваивается.
+        <div class="expertise-grid">
+          <div class="left">
+            <div class="expertise-media" data-rv-left>
+              <img
+                src="images/consult.jpg"
+                alt="Консультация дольщиков: юрист разбирает договор и планировку квартиры"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="media-chip"> Работаем лицом к лицу или онлайн по всему краю</div>
+            </div>
+            <p data-rv>
+              Мы не просто изучали 214-ФЗ по учебникам. Наша команда много лет
+              работала внутри строительной системы Краснодарского края — в
+              девелоперских компаниях и юридических службах кубанских
+              застройщиков. Мы знаем, какие аргументы реально пугают их
+              юридический отдел.
             </p>
-            <p>
-              При существенных недостатках квартиры или нарушении сроков более
-              чем на 2 месяца дольщик вправе
-              <strong>в одностороннем порядке отказаться от ДДУ</strong> и
-              потребовать возврата денег с процентами. В Краснодарском крае
-              такие дела рассматриваются районными судами Краснодара, Сочи,
-              Анапы, Новороссийска и Армавира.
+            <p data-rv>
+              Поэтому при анализе вашей ситуации мы оцениваем её не только с
+              позиции клиента, но и моделируем ответные ходы оппонента — с учётом
+              практики Краснодарского краевого суда.
             </p>
+            <div class="expertise-conclusion" data-rv>
+              Это даёт возможность ещё до суда определить слабые места позиции
+              застройщика и выбрать стратегию, которая сэкономит вам нервы и
+              деньги.
+            </div>
           </div>
-          <div class="legal-block">
-            <h3>🛡️ Закон «О защите прав потребителей» (ЗоЗПП)</h3>
-            <p>
-              Споры с застройщиками подпадают под действие ЗоЗПП, что даёт
-              дольщикам Кубани серьёзные преимущества:
-            </p>
-            <ul>
-              <li>
-                <strong>Освобождение от госпошлины</strong> при цене иска до 1
-                млн рублей
+          <div class="right">
+            <ul data-rv-stagger>
+              <li data-rv>
+                <span class="icon">🔍</span> Знаем, как кубанский застройщик
+                формирует доказательную базу, чтобы законно отказать вам.
               </li>
-              <li>
-                <strong>Альтернативная подсудность</strong> — можно подать иск
-                по месту своего жительства, даже если застройщик
-                зарегистрирован в другом районе края
+              <li data-rv>
+                <span class="icon">🧪</span> Понимаем, какие строительные
+                экспертизы они заказывают и как их грамотно оспорить в судах
+                Краснодара.
               </li>
-              <li>
-                <strong>Штраф 50%</strong> от присуждённой суммы в пользу
-                потребителя, если застройщик отказался добровольно удовлетворить
-                требования
-              </li>
-              <li>
-                <strong>Компенсация морального вреда</strong> — от 5 000 до 50
-                000 рублей
+              <li data-rv>
+                <span class="icon">⏳</span> Видим, какую тактику они используют,
+                чтобы затянуть время до мирового соглашения.
               </li>
             </ul>
           </div>
-          <div class="legal-block">
-            <h3>⏰ Сроки обращения в суд</h3>
+        </div>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-band" aria-label="Результаты команды в цифрах">
+        <div class="container stats-grid" data-rv-stagger>
+          <div class="stat" data-rv>
+            <div class="stat-num"><span class="counter" data-target="20">0</span>+</div>
+            <div class="stat-label">лет практики в недвижимости и строительстве Кубани</div>
+          </div>
+          <div class="stat" data-rv>
+            <div class="stat-num"><span class="counter" data-target="350">0</span>+</div>
+            <div class="stat-label">дел дольщиков доведено до результата</div>
+          </div>
+          <div class="stat" data-rv>
+            <div class="stat-num"><span class="counter" data-target="180">0</span> млн ₽</div>
+            <div class="stat-label">взыскано с застройщиков Краснодарского края</div>
+          </div>
+          <div class="stat" data-rv>
+            <div class="stat-num"><span class="counter" data-target="94">0</span>%</div>
+            <div class="stat-label">дел завершаются в пользу дольщика</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TASKS -->
+      <section class="section bg-alt">
+        <div class="container">
+          <div class="section-label" data-rv>Специализация</div>
+          <h2 class="section-title" data-rv>Что мы делаем в спорах с застройщиками Краснодарского края?</h2>
+          <div class="tasks-grid" data-rv-stagger>
+            <div class="task-item" data-rv>
+              <span class="icon">🚫</span>
+              <div>
+                <strong>Принуждаем к гарантийному ремонту</strong
+                ><span
+                  >Заставляем устранять строительные недостатки капитально, а не
+                  «замазывать» косметикой.</span
+                >
+              </div>
+            </div>
+            <div class="task-item" data-rv>
+              <span class="icon">💰</span>
+              <div>
+                <strong>Возвращаем деньги по ДДУ</strong
+                ><span
+                  >Расторгаем договор с выплатой полной стоимости и процентов за
+                  пользование вашими средствами.</span
+                >
+              </div>
+            </div>
+            <div class="task-item" data-rv>
+              <span class="icon">📆</span>
+              <div>
+                <strong>Взыскиваем неустойку за просрочку</strong
+                ><span
+                  >Получаем законные проценты за каждый день, а не навязанную
+                  «копеечную» выплату.</span
+                >
+              </div>
+            </div>
+            <div class="task-item" data-rv>
+              <span class="icon">🛡️</span>
+              <div>
+                <strong>Удваиваем сумму взыскания</strong
+                ><span
+                  >Добавляем компенсацию морального вреда и штраф 50% по закону о
+                  защите прав потребителей.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEPS -->
+      <section class="container section">
+        <div class="section-label" data-rv>Процесс</div>
+        <h2 class="section-title" data-rv>4 шага к защите ваших интересов в Краснодаре и крае</h2>
+        <div class="steps" data-rv-stagger>
+          <div class="step" data-rv>
+            <div class="num">01</div>
+            <h4>Анализ документов</h4>
             <p>
-              Общий <strong>срок исковой давности — 3 года</strong> (ст. 196 ГК
-              РФ). Важно понимать, с какого момента он начинает течь:
+              Вы присылаете ДДУ, Акт приёма-передачи, переписку и фото. Мы оцениваем
+              перспективы без «воды».
             </p>
-            <ul>
-              <li>
-                По неустойке за просрочку — с даты, указанной в ДДУ как срок
-                передачи квартиры
-              </li>
-              <li>
-                По качеству квартиры — с момента подписания акта приёма-передачи
-              </li>
-              <li>
-                По гарантийным обязательствам — в течение гарантийного срока
-                (минимум 5 лет на конструктив, 3 года на инженерные системы)
-              </li>
-            </ul>
+          </div>
+          <div class="step" data-rv>
+            <div class="num">02</div>
+            <h4>Экспертиза позиции</h4>
             <p>
-              <strong>Важно:</strong> не откладывайте обращение. Чем раньше
-              начать, тем больше сумма взыскания и выше шансы на успех в судах
-              Краснодарского края.
+              Мы смотрим на дело глазами судьи Краснодарского краевого суда и
+              глазами застройщика. Даём точный прогноз сумм и сроков.
+            </p>
+          </div>
+          <div class="step" data-rv>
+            <div class="num">03</div>
+            <h4>Стратегия</h4>
+            <p>
+              Вы получаете чёткий план: досудебная претензия или сразу иск, с
+              пошаговым расчётом расходов.
+            </p>
+          </div>
+          <div class="step" data-rv>
+            <div class="num">04</div>
+            <h4>Сопровождение</h4>
+            <p>
+              От подачи документов до получения исполнительного листа и контроля
+              списания денег со счетов застройщика.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARALLAX BAND -->
+      <section class="parallax-band" aria-label="Наш подход">
+        <img
+          class="parallax-img"
+          src="images/building.jpg"
+          alt="Новостройка в Краснодаре на стадии строительства"
+          loading="lazy"
+          decoding="async"
+          data-parallax="0.18"
+        />
+        <div class="parallax-overlay"></div>
+        <div class="container parallax-content">
+          <blockquote data-rv>
+            «Мы знаем, как думает юридический отдел застройщика,
+            <em>потому что сами работали внутри этих отделов</em>»
+          </blockquote>
+          <p data-rv>Краснодар · Сочи · Анапа · Новороссийск · Армавир</p>
+          <button class="btn-primary btn-accent open-popup-btn" data-rv>
+            Обсудить мою ситуацию →
+          </button>
+        </div>
+      </section>
+
+      <!-- ПРАВОВАЯ ОСНОВА -->
+      <section class="section bg-alt">
+        <div class="container">
+          <div class="section-label" data-rv>Правовая основа</div>
+          <h2 class="section-title" data-rv>
+            Что говорит закон о правах дольщиков и собственников в Краснодарском крае
+          </h2>
+          <div class="legal-content" data-rv-stagger>
+            <div class="legal-block" data-rv>
+              <h3>📜 Федеральный закон № 214-ФЗ</h3>
+              <p>
+                Закон о долевом строительстве защищает участников долевого
+                строительства. Если застройщик нарушает сроки передачи квартиры,
+                вы имеете право на
+                <strong>неустойку в размере 1/150 ставки ЦБ РФ</strong> от
+                стоимости жилья за каждый день просрочки. Для граждан эта сумма
+                удваивается.
+              </p>
+              <p>
+                При существенных недостатках квартиры или нарушении сроков более
+                чем на 2 месяца дольщик вправе
+                <strong>в одностороннем порядке отказаться от ДДУ</strong> и
+                потребовать возврата денег с процентами. В Краснодарском крае
+                такие дела рассматриваются районными судами Краснодара, Сочи,
+                Анапы, Новороссийска и Армавира.
+              </p>
+            </div>
+            <div class="legal-block" data-rv>
+              <h3>🛡️ Закон «О защите прав потребителей» (ЗоЗПП)</h3>
+              <p>
+                Споры с застройщиками подпадают под действие ЗоЗПП, что даёт
+                дольщикам Кубани серьёзные преимущества:
+              </p>
+              <ul>
+                <li>
+                  <strong>Освобождение от госпошлины</strong> при цене иска до 1
+                  млн рублей
+                </li>
+                <li>
+                  <strong>Альтернативная подсудность</strong> — можно подать иск
+                  по месту своего жительства, даже если застройщик
+                  зарегистрирован в другом районе края
+                </li>
+                <li>
+                  <strong>Штраф 50%</strong> от присуждённой суммы в пользу
+                  потребителя, если застройщик отказался добровольно удовлетворить
+                  требования
+                </li>
+                <li>
+                  <strong>Компенсация морального вреда</strong> — от 5 000 до 50
+                  000 рублей
+                </li>
+              </ul>
+            </div>
+            <div class="legal-block" data-rv>
+              <h3>⏰ Сроки обращения в суд</h3>
+              <p>
+                Общий <strong>срок исковой давности — 3 года</strong> (ст. 196 ГК
+                РФ). Важно понимать, с какого момента он начинает течь:
+              </p>
+              <ul>
+                <li>
+                  По неустойке за просрочку — с даты, указанной в ДДУ как срок
+                  передачи квартиры
+                </li>
+                <li>
+                  По качеству квартиры — с момента подписания акта приёма-передачи
+                </li>
+                <li>
+                  По гарантийным обязательствам — в течение гарантийного срока
+                  (минимум 5 лет на конструктив, 3 года на инженерные системы)
+                </li>
+              </ul>
+              <p>
+                <strong>Важно:</strong> не откладывайте обращение. Чем раньше
+                начать, тем больше сумма взыскания и выше шансы на успех в судах
+                Краснодарского края.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ТИПИЧНЫЕ ОШИБКИ -->
+      <section class="container section">
+        <div class="section-label" data-rv>Важно знать</div>
+        <h2 class="section-title" data-rv>
+          5 типичных ошибок дольщиков Краснодарского края, которые стоят им денег
+        </h2>
+        <div class="mistakes-grid" data-rv-stagger>
+          <div class="mistake-item" data-rv>
+            <div class="mistake-num">01</div>
+            <div>
+              <strong>Подписание акта приёма без замечаний</strong>
+              <p>
+                Если вы подписали акт приёма-передачи без замечаний, доказать
+                наличие недостатков будет крайне сложно. Всегда составляйте
+                дефектную ведомость.
+              </p>
+            </div>
+          </div>
+          <div class="mistake-item" data-rv>
+            <div class="mistake-num">02</div>
+            <div>
+              <strong>Согласие на «мировое» от застройщика</strong>
+              <p>
+                Кубанские застройщики часто предлагают выплатить 10–20% от
+                реальной суммы неустойки, чтобы закрыть вопрос. Не подписывайте
+                ничего без консультации юриста.
+              </p>
+            </div>
+          </div>
+          <div class="mistake-item" data-rv>
+            <div class="mistake-num">03</div>
+            <div>
+              <strong>Пропуск срока исковой давности</strong>
+              <p>
+                3 года пролетают незаметно. Если вы ждёте «пока застройщик
+                одумается», вы теряете право на взыскание.
+              </p>
+            </div>
+          </div>
+          <div class="mistake-item" data-rv>
+            <div class="mistake-num">04</div>
+            <div>
+              <strong>Самостоятельный ремонт до претензии</strong>
+              <p>
+                Если вы устранили недостатки за свой счёт без фиксации и
+                досудебной претензии, взыскать расходы будет почти невозможно.
+              </p>
+            </div>
+          </div>
+          <div class="mistake-item" data-rv>
+            <div class="mistake-num">05</div>
+            <div>
+              <strong>Отсутствие письменной переписки</strong>
+              <p>
+                Звонки и устные обещания не имеют юридической силы. Все требования
+                и ответы — только письменно, с отметкой о вручении.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- КОМУ ПОДХОДИТ -->
+      <section class="section bg-alt">
+        <div class="container">
+          <div class="section-label" data-rv>Целевая аудитория</div>
+          <h2 class="section-title" data-rv>Кому подойдёт наша помощь в Краснодарском крае</h2>
+          <div class="audience-grid" data-rv-stagger>
+            <div class="audience-card" data-rv>
+              <span class="audience-icon">🏢</span>
+              <h4>Дольщики по 214-ФЗ</h4>
+              <p>
+                Вы купили квартиру в строящемся доме по договору долевого участия
+                в Краснодаре, Сочи, Анапе или другом городе края. Застройщик
+                нарушает сроки, качество или условия договора.
+              </p>
+            </div>
+            <div class="audience-card" data-rv>
+              <span class="audience-icon">🏠</span>
+              <h4>Собственники новостроек на гарантии</h4>
+              <p>
+                Дом сдан, но проявились трещины, протечки, плохая вентиляция или
+                отделка не по договору. Гарантийный срок — минимум 5 лет, и он
+                работает на вас.
+              </p>
+            </div>
+            <div class="audience-card" data-rv>
+              <span class="audience-icon">🧾</span>
+              <h4>Те, кому навязывают «мировое»</h4>
+              <p>
+                Застройщик предлагает 10–20% от суммы неустойки и торопит с
+                подписью. Мы пересчитаем реальную сумму и оспорим кабальные
+                условия.
+              </p>
+            </div>
+            <div class="audience-card" data-rv>
+              <span class="audience-icon">🏗️</span>
+              <h4>Дольщики банкротящихся ЖК</h4>
+              <p>
+                Стройка замерла или девелопер в процедуре банкротства. Включаем
+                требования в реестр кредиторов и работаем с Фондом защиты прав
+                дольщиков.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ПРАКТИКА / КЕЙСЫ -->
+      <section class="container section">
+        <div class="section-label" data-rv>Практика</div>
+        <h2 class="section-title" data-rv>Примеры дел команды в судах Краснодарского края</h2>
+        <div class="cases-grid" data-rv-stagger>
+          <article class="case-card" data-rv>
+            <div class="case-tag">Просрочка передачи</div>
+            <div class="case-sum">1 470 000 ₽</div>
+            <p>
+              Неустойка по 214-ФЗ за 8 месяцев просрочки плюс штраф 50% по ЗоЗПП.
+              Застройщик предлагал 90 000 ₽ «по мировому».
+            </p>
+            <div class="case-meta">Краснодар · 3 месяца до решения</div>
+          </article>
+          <article class="case-card" data-rv>
+            <div class="case-tag">Недостатки квартиры</div>
+            <div class="case-sum">3 850 000 ₽</div>
+            <p>
+              Строительно-техническая экспертиза выявила нарушения по конструктиву
+              и вентиляции. Взысканы стоимость устранения и моральный вред.
+            </p>
+            <div class="case-meta">Сочи · 4 месяца до решения</div>
+          </article>
+          <article class="case-card" data-rv>
+            <div class="case-tag">Расторжение ДДУ</div>
+            <div class="case-sum">5 200 000 ₽</div>
+            <p>
+              Односторонний отказ от договора при просрочке более 2 месяцев:
+              возврат полной стоимости квартиры с процентами за пользование
+              средствами.
+            </p>
+            <div class="case-meta">Анапа · 2 месяца до решения</div>
+          </article>
+        </div>
+        <p class="cases-note" data-rv>
+          Примеры иллюстрируют типовые результаты команды. Сумма по вашему делу
+          зависит от обстоятельств и рассчитывается индивидуально.
+        </p>
+      </section>
+
+      <!-- ФОРМАТЫ РАБОТЫ / ЦЕНЫ -->
+      <section class="section bg-alt">
+        <div class="container">
+          <div class="section-label" data-rv>Форматы работы</div>
+          <h2 class="section-title" data-rv>Сколько стоит защита ваших интересов</h2>
+          <div class="price-cards" data-rv-stagger>
+            <div class="price-card" data-rv>
+              <h4>Экспресс-анализ дела</h4>
+              <div class="price">0 ₽</div>
+              <p>
+                Оцениваем перспективу за 24 часа: прогноз сумм и сроков, риски,
+                список документов и план действий. Без «воды» и обязательств.
+              </p>
+              <button class="btn-primary open-popup-btn">Записаться на анализ</button>
+            </div>
+            <div class="price-card featured" data-rv>
+              <div class="price-flag">Выбирают чаще всего</div>
+              <h4>Суд под ключ</h4>
+              <div class="price">от 45 000 ₽</div>
+              <p>
+                Претензия, иск, экспертизы, все инстанции и исполнительное
+                производство. Фиксированная смета в договоре, рассрочка на весь
+                срок дела.
+              </p>
+              <button class="btn-primary btn-accent open-popup-btn">Рассчитать смету</button>
+            </div>
+            <div class="price-card" data-rv>
+              <h4>Гонорар успеха</h4>
+              <div class="price">15%</div>
+              <p>
+                Оплата только из суммы, взысканной с застройщика. Нет результата
+                — нет гонорара. Риск команды закреплён в договоре.
+              </p>
+              <button class="btn-primary open-popup-btn">Узнать условия</button>
+            </div>
+          </div>
+          <p class="cases-note" data-rv>
+            Никаких скрытых платежей: все расходы фиксируются в договоре до
+            начала работы.
+          </p>
+        </div>
+      </section>
+
+      <!-- ОТЗЫВЫ -->
+      <section class="container section">
+        <div class="section-label" data-rv>Отзывы дольщиков</div>
+        <h2 class="section-title" data-rv>Что говорят клиенты после суда с застройщиком</h2>
+        <div class="reviews-grid" data-rv-stagger>
+          <figure class="review-card" data-rv>
+            <blockquote>
+              «ССК тянул с ключами почти год и предлагал смешную неустойку.
+              Ребята пересчитали, подали иск — через три месяца деньги были на
+              счёте. Все суммы объяснили заранее, сюрпризов не было.»
+            </blockquote>
+            <figcaption>
+              <span class="review-avatar" aria-hidden="true">АК</span>
+              <span>
+                <strong>Андрей К.</strong>
+                <em>Краснодар · неустойка за просрочку</em>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="review-card" data-rv>
+            <blockquote>
+              «В квартире грибок и щели в панорамном остеклении, застройщик
+              предлагал „косметику“. Экспертиза и суд — и нам оплатили капитальный
+              ремонт плюс моральный вред.»
+            </blockquote>
+            <figcaption>
+              <span class="review-avatar" aria-hidden="true">МС</span>
+              <span>
+                <strong>Марина С.</strong>
+                <em>Сочи · недостатки новостройки</em>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="review-card" data-rv>
+            <blockquote>
+              «Боялась, что суд съест больше, чем выплачу им же. Взяли на гонорар
+              успеха, вели дело от претензии до списания денег со счёта
+              застройщика. Спокойно и по плану.»
+            </blockquote>
+            <figcaption>
+              <span class="review-avatar" aria-hidden="true">ЕВ</span>
+              <span>
+                <strong>Елена В.</strong>
+                <em>Анапа · расторжение ДДУ</em>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section bg-alt">
+        <div class="container">
+          <div class="section-label" data-rv>Вопросы и ответы</div>
+          <h2 class="section-title" data-rv>Частые вопросы дольщиков Краснодарского края</h2>
+          <div class="faq-list" data-rv-stagger>
+            <div class="faq-item" data-rv>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a1">
+                Работаете ли вы со спорами с застройщиками в Краснодаре и крае?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer" id="faq-a1" role="region">
+                <div class="faq-answer-inner">
+                  <p>
+                    Да. Мы ведём дела в Краснодарском краевом суде, районных судах
+                    Краснодара, Сочи, Анапы, Новороссийска и Армавира. Знаем
+                    практику кубанских застройщиков — ССК, Dogma, «Точно»,
+                    «Метрикс Development», «Кубанская строительная компания».
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item" data-rv>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a2">
+                Что делать, если застройщик банкротится в Краснодарском крае?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer" id="faq-a2" role="region">
+                <div class="faq-answer-inner">
+                  <p>
+                    Это не тупик. У нас есть опыт включения требований дольщиков в
+                    реестр кредиторов в Арбитражном суде Краснодарского края. Даже
+                    при банкротстве можно вернуть деньги или получить квартиру
+                    через Фонд защиты прав дольщиков.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item" data-rv>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a3">
+                Правда ли, что суды по 214-ФЗ в Краснодаре длятся годами?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer" id="faq-a3" role="region">
+                <div class="faq-answer-inner">
+                  <p>
+                    Только если тянуть время. Мы выбираем агрессивную стратегию с
+                    учётом загрузки Краснодарского краевого суда, чтобы сократить
+                    сроки до 2–4 месяцев.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item" data-rv>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a4">
+                Какой срок исковой давности по спорам с застройщиком?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer" id="faq-a4" role="region">
+                <div class="faq-answer-inner">
+                  <p>
+                    Общий срок исковой давности — 3 года. По качеству квартиры срок
+                    течёт с момента передачи, по неустойке — с даты, указанной в
+                    ДДУ.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item" data-rv>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a5">
+                Можно ли взыскать деньги, если я уже сделал ремонт за свой счёт?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer" id="faq-a5" role="region">
+                <div class="faq-answer-inner">
+                  <p>
+                    Да, при условии сохранения доказательств: акта о недостатках,
+                    чеков, договоров с подрядчиками, фото- и видеофиксации. В
+                    Краснодарском крае суды принимают такие доказательства при
+                    грамотной экспертизе.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="container section">
+        <div class="final-cta">
+          <div class="cta-grid">
+            <div class="cta-left">
+              <div class="section-label">Бесплатный анализ</div>
+              <h2 class="section-title">Получите прогноз по вашему делу за 24 часа</h2>
+              <p class="section-desc">
+                Пришлите ДДУ и документы — оценим перспективу, посчитаем сумму
+                взыскания и честно скажем, если дело не стоит суда.
+              </p>
+              <ul class="cta-bullets">
+                <li>✅ Анализ и прогноз — бесплатно</li>
+                <li>🔒 Конфиденциально с первого сообщения</li>
+                <li>📄 Проверим документы и переписку с застройщиком</li>
+              </ul>
+              <div class="cta-media">
+                <img
+                  src="images/handover.jpg"
+                  alt="Юрист передаёт клиенту ключи и подписанный акт приёма-передачи"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <form class="cta-form contact-form" action="send.php" method="post" enctype="multipart/form-data" novalidate>
+              <input type="hidden" name="form_name" value="Форма в конце страницы" />
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cta-name">Ваше имя</label>
+                  <input id="cta-name" type="text" name="name" placeholder="Иван" required minlength="2" autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="cta-phone">Телефон</label>
+                  <input id="cta-phone" type="tel" name="phone" class="phone-mask" placeholder="+7 (___) ___-__-__" required autocomplete="tel" />
+                  <div class="field-error" role="alert"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="file-upload-wrapper">
+                  <input id="cta-files" type="file" name="attachment[]" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" />
+                  <label class="file-upload-label" for="cta-files">
+                    <span class="icon">📎</span>
+                    <span class="file-name-display">Нажмите или перетащите файлы</span>
+                  </label>
+                </div>
+                <div class="file-hint">ДДУ, акт приёма-передачи, претензии, фото недостатков — до 10 МБ</div>
+              </div>
+              <div class="privacy-checkbox">
+                <input type="checkbox" id="cta-privacy" name="privacy" required />
+                <label for="cta-privacy">
+                  Согласен на обработку персональных данных
+                  <a href="#" class="open-privacy-popup">Политика конфиденциальности</a>
+                </label>
+              </div>
+              <div class="botcheck" aria-hidden="true">
+                <label>Не заполняйте это поле</label>
+                <input type="text" name="botcheck" tabindex="-1" autocomplete="off" />
+              </div>
+              <button type="submit" class="btn-primary btn-accent submit-btn">
+                <span class="btn-text">Получить прогноз по моему делу →</span>
+                <span class="btn-loader">Отправляем…</span>
+              </button>
+              <div class="security-note">🔒 Данные не передаются третьим лицам и не публикуются</div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="container site-footer">
+      <div class="footer-col">
+        <a href="#top" class="logo">
+          <span class="logo-main">Юридическая поддержка дольщиков</span>
+          <span class="logo-sep" aria-hidden="true">|</span>
+          <span class="logo-sub">Краснодар и край</span>
+        </a>
+        <p class="footer-note">
+          Информация на сайте не является публичной офертой. Результаты по делам
+          индивидуальны. © <span class="year">2026</span>
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+        <a href="mailto:info@v-legal.ru">info@v-legal.ru</a>
+        <a href="#" class="open-privacy-popup">Политика конфиденциальности</a>
+      </div>
+    </footer>
+
+    <!-- МОБИЛЬНАЯ CTA-ПАНЕЛЬ -->
+    <div class="mobile-cta" aria-hidden="false">
+      <a class="mobile-cta-call" href="tel:+74950000000" aria-label="Позвонить юристу">📞</a>
+      <button class="btn-primary btn-accent open-popup-btn">Бесплатный анализ шансов</button>
+    </div>
+
+    <!-- POPUP: КОНСУЛЬТАЦИЯ -->
+    <div class="popup-overlay" id="consultPopup" role="dialog" aria-modal="true" aria-labelledby="consultTitle">
+      <div class="popup-modal">
+        <div class="popup-handle" aria-hidden="true"></div>
+        <button class="popup-close close-popup-btn" aria-label="Закрыть окно">×</button>
+        <h3 id="consultTitle" class="popup-title">Бесплатный анализ вашего дела</h3>
+        <p class="popup-sub">Ответим в течение рабочего дня и посчитаем перспективу взыскания.</p>
+        <form class="contact-form" action="send.php" method="post" enctype="multipart/form-data" novalidate>
+          <input type="hidden" name="form_name" value="Попап консультации" />
+          <div class="form-group">
+            <label for="pop-name">Ваше имя</label>
+            <input id="pop-name" type="text" name="name" placeholder="Иван" required minlength="2" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="pop-phone">Телефон</label>
+            <input id="pop-phone" type="tel" name="phone" class="phone-mask" placeholder="+7 (___) ___-__-__" required autocomplete="tel" />
+            <div class="field-error" role="alert"></div>
+          </div>
+          <div class="form-group">
+            <div class="file-upload-wrapper">
+              <input id="pop-files" type="file" name="attachment[]" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" />
+              <label class="file-upload-label" for="pop-files">
+                <span class="icon">📎</span>
+                <span class="file-name-display">Нажмите или перетащите файлы</span>
+              </label>
+            </div>
+            <div class="file-hint">ДДУ, акт, переписка — необязательно, но ускорит анализ</div>
+          </div>
+          <div class="privacy-checkbox">
+            <input type="checkbox" id="pop-privacy" name="privacy" required />
+            <label for="pop-privacy">
+              Согласен на обработку персональных данных
+              <a href="#" class="open-privacy-popup">Политика конфиденциальности</a>
+            </label>
+          </div>
+          <div class="botcheck" aria-hidden="true">
+            <label>Не заполняйте это поле</label>
+            <input type="text" name="botcheck" tabindex="-1" autocomplete="off" />
+          </div>
+          <button type="submit" class="btn-primary btn-accent submit-btn">
+            <span class="btn-text">Отправить заявку</span>
+            <span class="btn-loader">Отправляем…</span>
+          </button>
+          <div class="security-note">🔒 Данные не передаются третьим лицам</div>
+        </form>
+      </div>
+    </div>
+
+    <!-- POPUP: УСПЕХ -->
+    <div class="popup-overlay" id="successPopup" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+      <div class="popup-modal success-modal">
+        <div class="popup-handle" aria-hidden="true"></div>
+        <button class="popup-close close-popup-btn" aria-label="Закрыть окно">×</button>
+        <div class="success-icon" aria-hidden="true">✅</div>
+        <h3 id="successTitle">Заявка принята!</h3>
+        <p>Юрист свяжется с вами в течение рабочего дня и предложит время для разбора документов.</p>
+        <div class="success-features">
+          <div class="success-feature">
+            <span>⏱️</span>
+            <div>
+              <strong>24 часа</strong>
+              <p>столько займёт экспресс-анализ перспектив вашего дела</p>
+            </div>
+          </div>
+          <div class="success-feature">
+            <span>📄</span>
+            <div>
+              <strong>Подготовьте документы</strong>
+              <p>ДДУ, акт приёма-передачи и переписку с застройщиком — если есть</p>
+            </div>
+          </div>
+          <div class="success-feature">
+            <span>🤫</span>
+            <div>
+              <strong>Без спама</strong>
+              <p>один звонок по делу, никаких рассылок и передачи базы</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- POPUP: ПОЛИТИКА -->
+    <div class="popup-overlay" id="privacyPopup" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+      <div class="popup-modal privacy-modal">
+        <div class="popup-handle" aria-hidden="true"></div>
+        <button class="popup-close close-popup-btn" aria-label="Закрыть окно">×</button>
+        <h3 id="privacyTitle">Политика конфиденциальности</h3>
+        <div class="privacy-date">Редакция от 1 января 2026 года</div>
+        <div class="privacy-content">
+          <div class="privacy-section">
+            <h3>1. Общие положения</h3>
+            <p>
+              Настоящая политика описывает порядок обработки персональных данных
+              пользователей сайта юридической поддержки дольщиков Краснодара и
+              Краснодарского края. Отправляя формы на сайте, вы соглашаетесь с
+              условиями настоящей политики.
+            </p>
+          </div>
+          <div class="privacy-section">
+            <h3>2. Какие данные мы собираем</h3>
+            <ul>
+              <li>имя и номер телефона, указанные в формах обратной связи;</li>
+              <li>прикреплённые документы (ДДУ, акты, переписка, фотографии);</li>
+              <li>технические данные: IP-адрес, cookies, сведения о браузере.</li>
+            </ul>
+          </div>
+          <div class="privacy-section">
+            <h3>3. Цели обработки</h3>
+            <p>
+              Данные используются исключительно для связи с вами, подготовки
+              правового заключения по вашему делу и заключения договора на
+              оказание юридических услуг. Мы не продаём и не передаём данные
+              третьим лицам, за исключением случаев, предусмотренных законом.
+            </p>
+          </div>
+          <div class="privacy-section">
+            <h3>4. Хранение и защита</h3>
+            <p>
+              Данные хранятся на защищённых серверах на территории РФ. Доступ к
+              документам дела имеют только юристы, ведущие ваше дело. Срок
+              хранения — до отзыва согласия или 3 года с последнего обращения.
+            </p>
+          </div>
+          <div class="privacy-section">
+            <h3>5. Ваши права</h3>
+            <p>
+              Вы можете запросить копию своих данных, уточнить их или отозвать
+              согласие на обработку, написав на
+              <a href="mailto:info@v-legal.ru">info@v-legal.ru</a>. Отзыв согласия
+              не влияет на законность обработки, выполненной до отзыва.
             </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ТИПИЧНЫЕ ОШИБКИ -->
-    <section class="container section">
-      <div class="section-label">Важно знать</div>
-      <h2 class="section-title">
-        5 типичных ошибок дольщиков Краснодарского края, которые стоят им денег
-      </h2>
-      <div class="mistakes-grid">
-        <div class="mistake-item">
-          <div class="mistake-num">01</div>
-          <div>
-            <strong>Подписание акта приёма без замечаний</strong>
-            <p>
-              Если вы подписали акт приёма-передачи без замечаний, доказать
-              наличие недостатков будет крайне сложно. Всегда составляйте
-              дефектную ведомость.
-            </p>
-          </div>
-        </div>
-        <div class="mistake-item">
-          <div class="mistake-num">02</div>
-          <div>
-            <strong>Согласие на «мировое» от застройщика</strong>
-            <p>
-              Кубанские застройщики часто предлагают выплатить 10–20% от
-              реальной суммы неустойки, чтобы закрыть вопрос. Не подписывайте
-              ничего без консультации юриста.
-            </p>
-          </div>
-        </div>
-        <div class="mistake-item">
-          <div class="mistake-num">03</div>
-          <div>
-            <strong>Пропуск срока исковой давности</strong>
-            <p>
-              3 года пролетают незаметно. Если вы ждёте «пока застройщик
-              одумается», вы теряете право на взыскание.
-            </p>
-          </div>
-        </div>
-        <div class="mistake-item">
-          <div class="mistake-num">04</div>
-          <div>
-            <strong>Самостоятельный ремонт до претензии</strong>
-            <p>
-              Если вы устранили недостатки за свой счёт без фиксации и
-              досудебной претензии, взыскать расходы будет почти невозможно.
-            </p>
-          </div>
-        </div>
-        <div class="mistake-item">
-          <div class="mistake-num">05</div>
-          <div>
-            <strong>Отсутствие письменной переписки</strong>
-            <p>
-              Звонки и устные обещания не имеют юридической силы. Все требования
-              и ответы — только письменно, с отметкой о вручении.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- TOAST -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-    <!-- КОМУ ПОДХОДИТ -->
-    <section class="section bg-alt">
-      <div class="container">
-        <div class="section-label">Целевая аудитория</div>
-        <h2 class="section-title">Кому подойдёт наша помощь в Краснодарском крае</h2>
-        <div class="audience-grid">
-          <div class="audience-card">
-            <span class="audience-icon">🏢</span>
-            <h4>Дольщики по 214-ФЗ</h4>
-            <p>
-              Вы купили квартиру в строящемся доме по договору долевого участия
-              в Краснодаре, Сочи, Анапе или другом городе края. Застройщик
-              нарушает сроки, качество или условия договора.
-            </p>
-          </div>
-          <div class="
+    <script src="scripts/script.js"></script>
+    <script src="scripts/motion.js"></script>
+  </body>
+</html>
